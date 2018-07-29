@@ -15,8 +15,6 @@ add_filter( 'auto_update_core', '__return_false' );
 
 login with check user meta
 
-<code>
-  
 function email_verification($user)
 {
 	if($user->roles[0]!='administrator')
@@ -33,4 +31,3 @@ function email_verification($user)
 	}
 }
 add_filter('wp_authenticate_user', 'email_verification', 10, 1);
-</code>
